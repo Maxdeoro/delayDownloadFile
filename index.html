@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DelayedDownloading</title>
+    </head>
+    <body>
+        <p>
+            Downloading will start in several seconds. If the download has not started 
+            <a href='/download.zip'> press here.</a>
+        </p>
+        <div id='download_div' style="position:absolute; top: -100px;"></div>
+        <script type='text/javascript'>
+            setTimeout(function () {
+                document.getElementById('download_div').innerHTML =
+                '<iframe src="/download.zip" style="width:1px; height:1px;"></iframe>';
+            }, 10000);
+        </script>
+    </body>
+</html>
